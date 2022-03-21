@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms </title>
+</head>
+<body>
+    <h1>Please fill the form</h1>
+
+    <div>
+        <h2>Creating new article</h2>
+
+        <form action="serverSimulation.html" method="get">
+            <div>
+                <label>Article by:</label>
+                <input type="text" name="articleCreator">
+            </div>
+            <br/>
+            <div>
+                <label>Article title:</label>
+                <input type="text" name="articleTitle">
+            </div>
+            <br/>
+            <div>
+                <label>Select picture:</label>
+                <input type="file" name="mainPicture">
+            </div>
+            <br/>
+            <div>
+                <label>Article body:</label>
+                <textarea name="articleBody"></textarea>
+            </div>
+            <br/>
+            <div>
+                <label>Image position:</label>
+                <br/>
+                <label>Left:</label>
+                <input type="radio" name="imagePosition" checked>
+                <br/>
+                <label>Right:</label>
+                <input type="radio" name="imagePosition">
+            </div>
+            <br/>
+            <div>
+                <label>Show date:</label>
+                <input type="checkbox" name="hasDate">
+                <br/>
+                <label>Use two columns:</label>
+                <input type="checkbox" name="useTwoColumns">
+            </div>
+            <br/>
+            <button type="submit">Submit Query</button>
+        </form>
+    </div>
+</body>
+</html>
