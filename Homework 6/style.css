@@ -1,0 +1,39 @@
+body{
+    background-color:#34495e;
+}
+
+iframe{
+    width: 80%;
+    position: fixed;
+    height: 100px;
+    left: 10%;    
+}
+
+main{
+    width: 70%;
+    background-color: white;
+    top: 50px;
+    margin-left: 15%;
+    position:inherit;
+}
+
+nav.header{
+    background-color: #2980b9;
+    border: 0px;
+    height: 80px;
+}
+
+.logo{
+    display: inline-block;
+    padding-top: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+    vertical-align: middle;
+}
+
+span.menu a{
+    display: inline-block;
+    margin-left: 10%;
+    vertical-align: middle;
+}
+
