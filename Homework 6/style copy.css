@@ -1,0 +1,52 @@
+body{
+    margin: 0px;
+    padding-top: 100px;
+    background-color: blue;
+}
+
+#mainHeader{
+    position: fixed;
+    background-color: aqua;
+    padding: 0 20%;
+    width: 60%;
+    top: 0px;
+}
+
+#mainHeaderLinks{
+    text-align: center;
+    line-height: 100px;
+}
+
+#mainHeaderLinks a{
+    color: #ffffff;
+    margin: 0 25px;
+}
+
+#logo{
+    top: 8px;
+    position: absolute;
+}
+
+main{
+    margin: -10px 20% 0 20%;
+    padding: 25px 80px;
+    background-color: white;
+}
+
+.mainText{
+    width: 450px;
+    display: inline-block;
+}
+
+#mainImage{
+    width: 350px;
+    margin-left: 80px;
+    margin-top: -250px;
+    position: absolute;
+    right: 0px;
+    top: 70px;
+}
+
+#mainTextBlock{
+    position: relative;
+}
