@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Audio&Video</title>
+        <base href="includes/">
+    </head>
+    <body>
+        <header>
+            <h1>Short space quiz</h1>
+    
+            <p>
+                After you select you answer, click the next button to go to the next question
+            </p>
+        </header>
+
+        <form action="../question2.html">
+            <h2>By watching the video, can you guess what is the size of the space  station?</h2>
+    
+            <video src="iss animation.mp4" height="400" poster="iss.jpg" controls></video>
+    
+            <br>
+            <br>
+            <div>
+                <div>
+                    <label for="id_answer_a">A.</label>
+                    <input 
+                        type="radio" 
+                        id="id_answer_a" 
+                        name="answer" 
+                        value="a"
+                    />
+                    <label for="id_answer_a">350m X 232m</label>
+                </div>
+                
+                <div>
+                    <label for="id_answer_b">B.</label>
+                    <input 
+                        type="radio" 
+                        id="id_answer_b" 
+                        name="answer" 
+                        value="b"
+                    />
+                    <label for="id_answer_b">60m X 24m</label>
+                </div>
+    
+                <div>
+                    <label for="id_answer_c">C.</label>
+                    <input 
+                        type="radio" 
+                        id="id_answer_c" 
+                        name="answer" 
+                        value="c"
+                    />
+                    <label for="id_answer_c">109m X 73m</label>
+                </div>
+    
+                <div>
+                    <label for="id_answer_d">D.</label>
+                    <input 
+                        type="radio" 
+                        id="id_answer_d" 
+                        name="answer" 
+                        value="d"
+                    />
+                    <label for="id_answer_d">206m X 176m</label>            
+                </div>
+            </div>
+    
+            <br>
+            <input type="submit" value="Next question >">
+        </form>
+    </body>
+</html>
