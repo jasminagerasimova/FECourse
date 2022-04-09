@@ -1,0 +1,15 @@
+@keyframes example {
+    0% {transform: translatex(0) translatey(0));}
+    50% {transform: translatex(50vw) translatey(0) ;}
+    100% {transform: translatex(100vw) translatey(-100vh) rotate(45deg);}
+}
+
+div img{
+    height: 200px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;    
+    animation: example 4s 1s 2 linear;
+  } 
+  
+  
