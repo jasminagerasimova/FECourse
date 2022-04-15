@@ -10,9 +10,10 @@
 
 @mainTextColor: #ffffff;
 @mainBackgroundColor: #000000;
+@darkerMainTextColor: darken(#ffffff,60%);
 
 body{
-background-color: #000000;
+background-color: @mainBackgroundColor;
 margin: 0px;
 overflow-x: hidden;
 }
@@ -74,7 +75,7 @@ button:hover{
 }
 
 #hamburger{
-    background-color: #000000;
+    background-color: @mainBackgroundColor;
     border: 0;
 }
 
@@ -102,19 +103,19 @@ button:hover{
     left: 20%;
     right: 20%;
     text-align: center;
-}
 
-#heroText h1{
-    color: @mainTextColor; 
-    font: 100px/85px D-DIN-Bold,Arial,Verdana,sans-serif;
-    text-transform: uppercase;  
-    margin: 0 0 20px 0;
-}
+    h1{
+        color: @mainTextColor; 
+        font: 100px/85px D-DIN-Bold,Arial,Verdana,sans-serif;
+        text-transform: uppercase;  
+        margin: 0 0 20px 0;
+    }
 
-#heroText h3 {
-    color: @mainTextColor; 
-    font: 20px/32px D-DIN-Medium,Arial,Verdana,sans-serif;
-    text-transform: uppercase;
+    h3 {
+        color: @mainTextColor; 
+        font: 20px/32px D-DIN-Medium,Arial,Verdana,sans-serif;
+        text-transform: uppercase;
+    }
 }
 
 .centerWrapper{
@@ -171,18 +172,18 @@ button:hover{
         float: left;
         font: 20px/38px D-DIN-Medium,Arial,Verdana,sans-serif;
         font-weight: 400;
-        color: #ffffff;
+        color: @mainTextColor;
     }
 
     h3 {
-        color: #ffffff; 
+        color: @mainTextColor; 
         font: 20px/10px D-DIN-Medium,Arial,Verdana,sans-serif;
         font-weight: 400;
         text-transform: uppercase;
     }
 
     h2 {
-        color: #ffffff; 
+        color: @mainTextColor; 
         font: 48px/20px D-DIN-Bold,Arial,Verdana,sans-serif;
         font-weight: 400;
         text-transform: uppercase; 
@@ -198,7 +199,7 @@ button:hover{
 }
 
 table{
-    color: #ffffff;
+    color: @mainTextColor;
     border-collapse:collapse;
     max-width: 960px;
 }
@@ -222,7 +223,8 @@ td{
 
 .middleLeft span{
     font:16px/18px D-DIN-Regular,Arial,Verdana,sans-serif;
-    color: #868686;
+    //color: #868686;
+    color: @darkerMainTextColor;
 }
 
 .buttons{    
@@ -269,23 +271,32 @@ td{
 .centerWrapper p{
     margin: 40px auto 0;
     font: 14px/18px D-DIN-Medium,Arial,Verdana,sans-serif;
-    color: #919191;
-}
+   // color: #919191;
+    color:darken(@mainTextColor,43%);
 
-.centerWrapper p a{
-    color: #fff;
-    font: 14px/14px D-DIN-Medium,Arial,Verdana,sans-serif;
-    text-decoration: none;
-}
+    a{
+        color: @mainTextColor;
+        font: 14px/14px D-DIN-Medium,Arial,Verdana,sans-serif;
+        text-decoration: none;
+    }    
 
-.centerWrapper p a:not(.hover-none):hover {
-    color: #ccc;
-    text-decoration: none;
+    a:not(.hover-none):hover {
+        //color: #ccc;
+        color:darken(@mainTextColor,20%);
+        text-decoration: none;
+    }
+
+    span{
+        font-size: 12px;
+        margin: 0 20px;
+        font:D-DIN-Regular,Arial,Verdana,sans-serif;
+        text-transform: uppercase;
+    }
 }
 
 .centerWrapper .footerWrapper{
     display: inline-block;
-    color: #ffffff;
+    color: @mainTextColor;
     font: 14px/50px D-DIN-Bold,Arial,Verdana,sans-serif;
     text-transform: uppercase;
     text-align: center;
@@ -309,14 +320,7 @@ td{
 .centerWrapper .social{
     font: 12px/24px D-DIN-Bold,Arial,Verdana,sans-serif;
     font-weight: 400;
-    color: #fff;
+    color: @mainTextColor;
     text-decoration: none;
-    text-transform: uppercase;
-}
-
-.centerWrapper p span{
-    font-size: 12px;
-    margin: 0 20px;
-    font:D-DIN-Regular,Arial,Verdana,sans-serif;
     text-transform: uppercase;
 }

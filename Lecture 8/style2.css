@@ -181,7 +181,7 @@ td:first-child {
 }
 .middleLeft span {
   font: 16px/18px D-DIN-Regular, Arial, Verdana, sans-serif;
-  color: #868686;
+  color: #666666;
 }
 .buttons {
   height: 50px;
@@ -221,13 +221,19 @@ td:first-child {
   color: #919191;
 }
 .centerWrapper p a {
-  color: #fff;
+  color: #ffffff;
   font: 14px/14px D-DIN-Medium, Arial, Verdana, sans-serif;
   text-decoration: none;
 }
 .centerWrapper p a:not(.hover-none):hover {
-  color: #ccc;
+  color: #cccccc;
   text-decoration: none;
+}
+.centerWrapper p span {
+  font-size: 12px;
+  margin: 0 20px;
+  font: D-DIN-Regular, Arial, Verdana, sans-serif;
+  text-transform: uppercase;
 }
 .centerWrapper .footerWrapper {
   display: inline-block;
@@ -252,13 +258,7 @@ td:first-child {
 .centerWrapper .social {
   font: 12px/24px D-DIN-Bold, Arial, Verdana, sans-serif;
   font-weight: 400;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
-  text-transform: uppercase;
-}
-.centerWrapper p span {
-  font-size: 12px;
-  margin: 0 20px;
-  font: D-DIN-Regular, Arial, Verdana, sans-serif;
   text-transform: uppercase;
 }
