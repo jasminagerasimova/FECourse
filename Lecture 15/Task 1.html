@@ -10,24 +10,38 @@
     <script>
         var firstNumber = 0,
             secondNumber = 0,
-            isPlusClicked = false;
+            isPlusClicked = false,
+            isNumClicked = false,
+            result =0;
 
         function onNumberClicked(num){
-            if(isPlusClicked){
-                secondNumber=''+ secondNumber + num;                
+            if((isPlusClicked) & (isNumClicked)){
+                secondNumber=''+ secondNumber + num; 
+                console.log('second'+secondNumber);               
+            }else if((isPlusClicked) & (!isNumClicked)){
+                secondNumber=''+ num;
+                console.log('sec'+secondNumber);
             }else {
                 firstNumber='' + firstNumber + num;
+                result=Number(firstNumber);
+                console.log('first'+firstNumber);
             }
             document.title += num;
+            isNumClicked = true;
         }
 
-        function onPlusClicked(){
-            isPlusClicked = true;
+        function onPlusClicked(){              
+            isPlusClicked = true; 
+            isNumClicked = false;
+            console.log('+');            
+            onEqClicked();
             document.title += '+';
         }
 
         function onEqClicked(){
-            document.title = Number(firstNumber) + Number(secondNumber);
+            result = result + Number(secondNumber);
+            console.log('res'+result);
+            document.title = result;            
         }
     </script>
 
