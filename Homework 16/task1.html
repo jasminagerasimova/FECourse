@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .tooltipItem{
+            position: relative;
+            height: 55px;
+            width: 60px;
+            padding-top:5px;
+            margin: 200px auto 0 auto;
+
+            color: #fff;
+            font-size: 40px;
+            text-align: center;
+            background-color: #27ae60;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .tooltipWrapper{
+            position: absolute;
+            height: 130px;
+            width: 200px;
+            top: 70px;
+            left: 40px;
+            padding: 20px;
+            background-color: #bdc3c7;
+            box-shadow: 5px 5px 5px #2c3e50;
+            color:#2c3e50;
+            font-size: 14px;
+        }
+
+        .minus{
+            margin-top:-3px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="tooltipItem">
+        <div class="plus">+</div>
+        <div class="minus" >-</div>
+        <div class="tooltipWrapper">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente error facere possimus repellendus suscipit autem ullam corporis, voluptates officiis ex sunt consequatur ipsa dolore ipsum? Quidem, placeat quam. Non, id!   
+        </div>
+    </div>
+
+    <script>
+        var Plus = document.querySelector('.plus');
+        var Minus = document.querySelector('.minus');
+        var Lorem = document.querySelector('.tooltipWrapper');
+
+        Minus.hidden = true;
+        Lorem.hidden = true;
+
+        Plus.addEventListener('click', onPlus);
+        Minus.addEventListener('click', onMinus);
+
+        function onPlus(event){
+            Plus.hidden = true;
+            Minus.hidden = false;
+            Lorem.hidden = false;
+        }
+
+        
+        function onMinus(event){
+            Plus.hidden = false;
+            Minus.hidden = true;
+            Lorem.hidden = true;
+        }
+    </script>
+</body>
+</html>
