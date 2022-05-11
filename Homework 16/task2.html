@@ -78,6 +78,10 @@
         var VenusHandel = document.querySelector('#Venus .acordeonHandel');
         var EarthHandel = document.querySelector('#Earth .acordeonHandel');
 
+        var MercuryBool = true;
+        var VenusBool = true;
+        var EarthBool = true;
+
         Mercury.hidden = true;
         Venus.hidden = true;
         Earth.hidden = true;
@@ -87,21 +91,59 @@
         EarthHandel.addEventListener('click', onAcordeonE);
 
         function onAcordeonM(event){
-            Mercury.hidden = false;
-            Venus.hidden = true;
-            Earth.hidden = true;
+            if (MercuryBool) {
+                Mercury.hidden = false;
+                Venus.hidden = true;
+                Earth.hidden = true;
+
+                MercuryBool = false;
+                VenusBool = true;
+                EarthBool = true;
+            }else {
+                Mercury.hidden = true;
+                Venus.hidden = true;
+                Earth.hidden = true;
+
+                MercuryBool = true;
+            }
+            
         }
 
         function onAcordeonV(event){
-            Mercury.hidden = true;
-            Venus.hidden = false;
-            Earth.hidden = true;
+            if (VenusBool) {
+                Mercury.hidden = true;
+                Venus.hidden = false;
+                Earth.hidden = true;
+                
+                MercuryBool = true;
+                VenusBool = false;                
+                EarthBool = true;
+            }else {
+                Mercury.hidden = true;
+                Venus.hidden = true;
+                Earth.hidden = true;
+
+                VenusBool = true;
+            }           
         }
 
         function onAcordeonE(event){
-            Mercury.hidden = true;
-            Venus.hidden = true;
-            Earth.hidden = false;
+            if (EarthBool) {
+                Mercury.hidden = true;
+                Venus.hidden = true;
+                Earth.hidden = false;             
+               
+                MercuryBool = true;
+                VenusBool = true;
+                EarthBool = false;
+
+            }else {
+                Mercury.hidden = true;
+                Venus.hidden = true;
+                Earth.hidden = true;
+
+                EarthBool = true;
+            }  
         }
 
     </script>
