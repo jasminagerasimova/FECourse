@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" name="time" id="btn" value="button">
+    <input type="button" name="time" id="stop" value="stop">
+    <script>
+        var a = 0;
+        var btn = document.getElementById('btn');
+        var stopbtn = document.getElementById('stop');
+        //var a = setInterval(logThikgsn,1000);
+        btn.addEventListener('click', btnFunc);
+         stopbtn.addEventListener('click', stopFunc);
+
+        function btnFunc(){
+            clearInterval(a);
+           a= setInterval(logThikgsn, 1000);
+        }
+
+        function stopFunc(){
+            clearInterval(a);
+        }
+
+        function logThikgsn(){
+            console.log('1 dfdsfsd');
+            //setTimeout(logThikgsn, 1000);
+        }
+    </script>
+</body>
+</html>

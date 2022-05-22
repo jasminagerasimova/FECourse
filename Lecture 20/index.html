@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<style>
+    .colorButton{
+        display: block;
+        width: 100px;
+        background-color: brown;
+    }
+
+    .newColorButton{
+        display: block;
+        width: 100px;
+        background-color: blueviolet;
+    }
+</style>
+</head>
+<body>
+    
+
+    <button id="clickMe">Click me</button>
+    <div class="colorButton">        
+        Initial text
+    </div>
+
+    <input type="checkbox" class="check">
+    
+    <script>
+        //var button= document.querySelector('button');
+       // button.forEach((item)=>{   })
+        var button = $('button')[0];
+
+        button.addEventListener('click', onButtonClicked);
+        $('button').click(onButtonClicked);
+        function onButtonClicked(){
+          //  console.log('123');
+            //document.querySelector('.display').innerText = 'New Text';
+            //document.querySelector('.display').classList.add('active');
+            $('.display').text('New Text');
+            
+            $('.colorButton')
+                .addClass('newColorButton');
+                $('.check').prop('checked', true);
+
+
+
+        }
+    </script>
+</body>
+</html>

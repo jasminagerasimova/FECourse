@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Acordeon</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style>
         body{
@@ -70,77 +71,111 @@
     </div>
 
     <script>
-        var Mercury = document.querySelector('#Mercury .acordeonContent');
-        var Venus = document.querySelector('#Venus .acordeonContent');
-        var Earth = document.querySelector('#Earth .acordeonContent');
+        $('#Mercury').click(onAcordeonM);
+        $('#Venus').click(onAcordeonV);
+        $('#Earth').click(onAcordeonE);
 
-        var MercuryHandel = document.querySelector('#Mercury .acordeonHandel');
-        var VenusHandel = document.querySelector('#Venus .acordeonHandel');
-        var EarthHandel = document.querySelector('#Earth .acordeonHandel');
+
+       // var Mercury = document.querySelector('#Mercury .acordeonContent');
+       // var Venus = document.querySelector('#Venus .acordeonContent');
+        //var Earth = document.querySelector('#Earth .acordeonContent');
+
+       // var MercuryHandel = document.querySelector('#Mercury .acordeonHandel');
+       // var VenusHandel = document.querySelector('#Venus .acordeonHandel');
+       // var EarthHandel = document.querySelector('#Earth .acordeonHandel');
 
         var MercuryBool = true;
         var VenusBool = true;
         var EarthBool = true;
 
-        Mercury.hidden = true;
-        Venus.hidden = true;
-        Earth.hidden = true;
+       // Mercury.hidden = true;
+        //Venus.hidden = true;
+       // Earth.hidden = true;
 
-        MercuryHandel.addEventListener('click', onAcordeonM);
-        VenusHandel.addEventListener('click', onAcordeonV);
-        EarthHandel.addEventListener('click', onAcordeonE);
+        $('#Mercury .acordeonContent').prop('hidden', true);
+        $('#Venus .acordeonContent').prop('hidden', true);
+         $('#Earth .acordeonContent').prop('hidden', true);             
 
-        function onAcordeonM(event){
+
+       // MercuryHandel.addEventListener('click', onAcordeonM);
+       // VenusHandel.addEventListener('click', onAcordeonV);
+       // EarthHandel.addEventListener('click', onAcordeonE);
+
+        function onAcordeonM(){
             if (MercuryBool) {
-                Mercury.hidden = false;
-                Venus.hidden = true;
-                Earth.hidden = true;
+                //Mercury.hidden = false;
+                $('#Mercury .acordeonContent').prop('hidden', false);
+                $('#Venus .acordeonContent').prop('hidden', true);
+                $('#Earth .acordeonContent').prop('hidden', true);            
+                   
+               // Venus.hidden = true;
+               // Earth.hidden = true;
 
                 MercuryBool = false;
                 VenusBool = true;
                 EarthBool = true;
             }else {
-                Mercury.hidden = true;
-                Venus.hidden = true;
-                Earth.hidden = true;
+
+                $('#Mercury .acordeonContent').prop('hidden', true);
+                $('#Venus .acordeonContent').prop('hidden', true);
+                $('#Earth .acordeonContent').prop('hidden', true); 
+               // Mercury.hidden = true;
+               // Venus.hidden = true;
+               // Earth.hidden = true;
 
                 MercuryBool = true;
             }
             
         }
 
-        function onAcordeonV(event){
+        function onAcordeonV(){
             if (VenusBool) {
-                Mercury.hidden = true;
-                Venus.hidden = false;
-                Earth.hidden = true;
+               // Mercury.hidden = true;
+               // Venus.hidden = false;
+               // Earth.hidden = true;
+
+                $('#Mercury .acordeonContent').prop('hidden', true);
+                $('#Venus .acordeonContent').prop('hidden', false);
+                $('#Earth .acordeonContent').prop('hidden', true); 
                 
                 MercuryBool = true;
                 VenusBool = false;                
                 EarthBool = true;
             }else {
-                Mercury.hidden = true;
-                Venus.hidden = true;
-                Earth.hidden = true;
+               // Mercury.hidden = true;
+                //Venus.hidden = true;
+               // Earth.hidden = true;
+
+                $('#Mercury .acordeonContent').prop('hidden', true);
+                $('#Venus .acordeonContent').prop('hidden', true);
+                $('#Earth .acordeonContent').prop('hidden', true); 
 
                 VenusBool = true;
             }           
         }
 
-        function onAcordeonE(event){
+        function onAcordeonE(){
             if (EarthBool) {
-                Mercury.hidden = true;
-                Venus.hidden = true;
-                Earth.hidden = false;             
-               
+                //Mercury.hidden = true;
+                //Venus.hidden = true;
+                //Earth.hidden = false;  
+                
+                $('#Mercury .acordeonContent').prop('hidden', true);
+                $('#Venus .acordeonContent').prop('hidden', true);
+                $('#Earth .acordeonContent').prop('hidden', false); 
+
                 MercuryBool = true;
                 VenusBool = true;
                 EarthBool = false;
 
             }else {
-                Mercury.hidden = true;
-                Venus.hidden = true;
-                Earth.hidden = true;
+                //Mercury.hidden = true;
+               // Venus.hidden = true;
+                //.hidden = true;
+
+                $('#Mercury .acordeonContent').prop('hidden', true);
+                $('#Venus .acordeonContent').prop('hidden', true);
+                $('#Earth .acordeonContent').prop('hidden', true);
 
                 EarthBool = true;
             }  
